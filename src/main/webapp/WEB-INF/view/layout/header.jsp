@@ -12,7 +12,9 @@
 
         <body>
             <ul>
-                <li>
+                <c:choose>
+                   <c:when test="${principal == null}">
+                    <li>
                     <a href="/">홈</a>
                 </li>
                 <li>
@@ -21,10 +23,19 @@
                 <li>
                     <a href="/joinForm">회원가입</a>
                 </li>
+                   </c:when>
+                
+                   <c:otherwise>
+                <li>
+                    <a href="/">홈</a>
+                </li>
                 <li>
                     <a href="/purchase">구매목록</a>
                 </li>
                 <li>
                     <a href="/logout">로그아웃</a>
                 </li>
+                   </c:otherwise>
+                </c:choose>
+
             </ul>
