@@ -6,13 +6,13 @@ import org.apache.ibatis.annotations.Mapper;
 
 @Mapper
 public interface ProductRepository {
-    public int insert(String username, String password, String email);
+    public int insert(String name, int price, int qty);
 
-    public List<User> findAll();
+    public List<Product> findAll();
 
-    public User findById(int id);
+    public Product findById(int id);
 
-    public int updateById(int id, String password); // 우리사이트는 이것만 가능해 수정 안되면지워
+    public int updateById(int id, String name, int price, int qty);
 
     public int deleteById(int id);
 }

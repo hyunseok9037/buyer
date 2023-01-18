@@ -18,12 +18,5 @@ public interface UserRepository { // CRUD 레파지스토리 마다 무조건 �
     public int updateById(int id, String password); // 우리사이트는 이것만 가능해 수정 안되면지워
 
     public int deleteById(int id);
-    // public int insert(String username, String password, String email);
-
-    // public User login(String username, String password);
-
-    // public int delete(int id);
-
-    // public int updatepassword(int id, String password);
 
 }
